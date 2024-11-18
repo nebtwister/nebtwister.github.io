@@ -250,51 +250,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>   <span class="fu">tab_style</span>(</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"title"</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"subtitle"</span>)</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">|&gt;</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="fu">md</span>(<span class="st">"By Derek Harrington  &lt;br&gt;Data courtesy of Evollve.net&lt;br&gt; *2020 was COVID; 2024 doesn't represent full season"</span>))<span class="sc">|&gt;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="fu">md</span>(<span class="st">"**By** Derek Harrington  &lt;br&gt;**Data courtesy of** Evollve.net&lt;br&gt; *2020 was COVID; 2024 doesn't represent full season"</span>))<span class="sc">|&gt;</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>   <span class="fu">tab_style</span>(</span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_column_labels</span>(<span class="at">columns =</span> <span class="fu">everything</span>()),</span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_borders</span>(<span class="at">sides =</span> <span class="st">"bottom"</span>, <span class="at">weight =</span> <span class="fu">px</span>(<span class="dv">3</span>)),</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">12</span>)))<span class="sc">|&gt;</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_row_striping</span>() <span class="sc">|&gt;</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_lines</span>(<span class="st">"none"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(ace_average, errors),</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">0</span>)<span class="sc">|&gt;</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">weight=</span><span class="st">"bold"</span>)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> season <span class="sc">==</span> <span class="st">"2022"</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">10</span>)))<span class="sc">|&gt;</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>   <span class="fu">cols_align</span>(</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">"left"</span>,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> season</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">|&gt;</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_row_striping</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_lines</span>(<span class="st">"none"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(ace_average, errors),</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">0</span>)<span class="sc">|&gt;</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">weight=</span><span class="st">"bold"</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> season <span class="sc">==</span> <span class="st">"2022"</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="lqkdynopmf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lqkdynopmf table {
+<div id="dgsdlenedr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dgsdlenedr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lqkdynopmf thead, #lqkdynopmf tbody, #lqkdynopmf tfoot, #lqkdynopmf tr, #lqkdynopmf td, #lqkdynopmf th {
+#dgsdlenedr thead, #dgsdlenedr tbody, #dgsdlenedr tfoot, #dgsdlenedr tr, #dgsdlenedr td, #dgsdlenedr th {
   border-style: none;
 }
 
-#lqkdynopmf p {
+#dgsdlenedr p {
   margin: 0;
   padding: 0;
 }
 
-#lqkdynopmf .gt_table {
+#dgsdlenedr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -320,12 +324,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_caption {
+#dgsdlenedr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lqkdynopmf .gt_title {
+#dgsdlenedr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -337,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#lqkdynopmf .gt_subtitle {
+#dgsdlenedr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -349,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#lqkdynopmf .gt_heading {
+#dgsdlenedr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -361,13 +365,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_bottom_border {
+#dgsdlenedr .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_col_headings {
+#dgsdlenedr .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -382,7 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_col_heading {
+#dgsdlenedr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -402,7 +406,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#lqkdynopmf .gt_column_spanner_outer {
+#dgsdlenedr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -414,15 +418,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#lqkdynopmf .gt_column_spanner_outer:first-child {
+#dgsdlenedr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lqkdynopmf .gt_column_spanner_outer:last-child {
+#dgsdlenedr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lqkdynopmf .gt_column_spanner {
+#dgsdlenedr .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -434,11 +438,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#lqkdynopmf .gt_spanner_row {
+#dgsdlenedr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lqkdynopmf .gt_group_heading {
+#dgsdlenedr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -464,7 +468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#lqkdynopmf .gt_empty_group_heading {
+#dgsdlenedr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -479,15 +483,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#lqkdynopmf .gt_from_md > :first-child {
+#dgsdlenedr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lqkdynopmf .gt_from_md > :last-child {
+#dgsdlenedr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lqkdynopmf .gt_row {
+#dgsdlenedr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -506,7 +510,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#lqkdynopmf .gt_stub {
+#dgsdlenedr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -519,7 +523,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#lqkdynopmf .gt_stub_row_group {
+#dgsdlenedr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -533,15 +537,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#lqkdynopmf .gt_row_group_first td {
+#dgsdlenedr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lqkdynopmf .gt_row_group_first th {
+#dgsdlenedr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lqkdynopmf .gt_summary_row {
+#dgsdlenedr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -551,16 +555,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#lqkdynopmf .gt_first_summary_row {
+#dgsdlenedr .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_first_summary_row.thick {
+#dgsdlenedr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lqkdynopmf .gt_last_summary_row {
+#dgsdlenedr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -570,7 +574,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_grand_summary_row {
+#dgsdlenedr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -580,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#lqkdynopmf .gt_first_grand_summary_row {
+#dgsdlenedr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -590,7 +594,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_last_grand_summary_row_top {
+#dgsdlenedr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -600,11 +604,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_striped {
+#dgsdlenedr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lqkdynopmf .gt_table_body {
+#dgsdlenedr .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -613,7 +617,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_footnotes {
+#dgsdlenedr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -627,7 +631,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_footnote {
+#dgsdlenedr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -636,7 +640,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#lqkdynopmf .gt_sourcenotes {
+#dgsdlenedr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -650,7 +654,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#lqkdynopmf .gt_sourcenote {
+#dgsdlenedr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -658,72 +662,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#lqkdynopmf .gt_left {
+#dgsdlenedr .gt_left {
   text-align: left;
 }
 
-#lqkdynopmf .gt_center {
+#dgsdlenedr .gt_center {
   text-align: center;
 }
 
-#lqkdynopmf .gt_right {
+#dgsdlenedr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lqkdynopmf .gt_font_normal {
+#dgsdlenedr .gt_font_normal {
   font-weight: normal;
 }
 
-#lqkdynopmf .gt_font_bold {
+#dgsdlenedr .gt_font_bold {
   font-weight: bold;
 }
 
-#lqkdynopmf .gt_font_italic {
+#dgsdlenedr .gt_font_italic {
   font-style: italic;
 }
 
-#lqkdynopmf .gt_super {
+#dgsdlenedr .gt_super {
   font-size: 65%;
 }
 
-#lqkdynopmf .gt_footnote_marks {
+#dgsdlenedr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lqkdynopmf .gt_asterisk {
+#dgsdlenedr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lqkdynopmf .gt_indent_1 {
+#dgsdlenedr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lqkdynopmf .gt_indent_2 {
+#dgsdlenedr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lqkdynopmf .gt_indent_3 {
+#dgsdlenedr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lqkdynopmf .gt_indent_4 {
+#dgsdlenedr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lqkdynopmf .gt_indent_5 {
+#dgsdlenedr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lqkdynopmf .katex-display {
+#dgsdlenedr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lqkdynopmf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dgsdlenedr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -742,45 +746,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">Stunning increase in aces and errors in 2022</th>
 </tr>
 <tr class="gt_col_headings header">
-<th id="season" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Season</th>
-<th id="ace_average" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Avg. Aces</th>
-<th id="errors" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Avg. Errors</th>
+<th id="season" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 10; font-weight: bold" scope="col">Season</th>
+<th id="ace_average" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 10; font-weight: bold" scope="col">Avg. Aces</th>
+<th id="errors" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 10; font-weight: bold" scope="col">Avg. Errors</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="season">2019</td>
+<td class="gt_row gt_left" headers="season">2019</td>
 <td class="gt_row gt_right" headers="ace_average">145</td>
 <td class="gt_row gt_right" headers="errors">214</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right gt_striped" headers="season">2020</td>
+<td class="gt_row gt_left gt_striped" headers="season">2020</td>
 <td class="gt_row gt_right gt_striped" headers="ace_average">72</td>
 <td class="gt_row gt_right gt_striped" headers="errors">102</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="season">2021</td>
+<td class="gt_row gt_left" headers="season">2021</td>
 <td class="gt_row gt_right" headers="ace_average">148</td>
 <td class="gt_row gt_right" headers="errors">205</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right gt_striped" headers="season" style="background-color: #FFFFFF; color: #006400; font-weight: bold">2022</td>
+<td class="gt_row gt_left gt_striped" headers="season" style="background-color: #FFFFFF; color: #006400; font-weight: bold">2022</td>
 <td class="gt_row gt_right gt_striped" headers="ace_average" style="background-color: #FFFFFF; color: #006400; font-weight: bold">161</td>
 <td class="gt_row gt_right gt_striped" headers="errors" style="background-color: #FFFFFF; color: #006400; font-weight: bold">217</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="season">2023</td>
+<td class="gt_row gt_left" headers="season">2023</td>
 <td class="gt_row gt_right" headers="ace_average">164</td>
 <td class="gt_row gt_right" headers="errors">226</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right gt_striped" headers="season">2024</td>
+<td class="gt_row gt_left gt_striped" headers="season">2024</td>
 <td class="gt_row gt_right gt_striped" headers="ace_average">99</td>
 <td class="gt_row gt_right gt_striped" headers="errors">141</td>
 </tr>
 </tbody><tfoot class="gt_sourcenotes">
 <tr class="odd">
-<td colspan="3" class="gt_sourcenote">By Derek Harrington <br>Data courtesy of Evollve.net<br> *2020 was COVID; 2024 doesn’t represent full season</td>
+<td colspan="3" class="gt_sourcenote"><strong>By</strong> Derek Harrington <br><strong>Data courtesy of</strong> Evollve.net<br> *2020 was COVID; 2024 doesn’t represent full season</td>
 </tr>
 </tfoot>
 
@@ -1304,7 +1308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
 <span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fl">17.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
 <span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_textbox_simple</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>),</span>
 <span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
 <span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">60</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
